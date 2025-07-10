@@ -7,7 +7,7 @@
   <div class="col-8 offset-3 mt-3">
     <h3><%= listing.title %></h3>
   </div>
-  <div class="card col-6 offset-3 show-card listing-card">
+  <div class="card col-12 col-md-6 offset-md-3 show-card listing-card">
     <img
       src="<%= listing.image?.url || '/css/image/villaimage.jpg' %>"
       class="card-img-top show-image"
@@ -18,8 +18,8 @@
         <b
           >Owned by:<i class="title-username">
             <%= listing.owner.username %>
-          </i></b
-        ><br />
+          </i></b>
+        <hr/>
       </p>
       <p class="card-text"><%= listing.description %><br /></p>
       <p class="card-text">
@@ -126,7 +126,7 @@
     <div class="row">
       <p><b>All Reviews</b></p>
       <% for(review of listing.reviews) { %>
-      <div class="card col-5 ms-3 mb-3">
+      <div class="card col-12 col-md-5 mx-auto mb-3 review-card">
         <div class="card-body">
           <h5 class="card-title">@<%= review.author.username %></h5>
           <p
@@ -147,9 +147,9 @@
     </div>
     <% } %>
   </div>
-  <div class="col-6 offset-3 mb-3">
+  <div class="col-12 col-md-6 offset-md-3 mb-3">
       <h3>Where You'll be</h3>
-      <div id="map"></div>
+      <div id="map" class="listing-map"></div>
   </div>
   
 </div>

@@ -1,4 +1,36 @@
 <style>
+
+  /* Overlay background when navbar collapses */
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+  }
+
+  .mobile-overlay.active {
+    display: block;
+  }
+
+  .navbar-collapse {
+    z-index: 999;
+  }
+  .navbar-collapse.collapse.show {
+    background-color: #f8f9fa !important;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+  }
+  .navbar-collapse.custom-bg {
+    background-color: #f8f9fa !important;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    transition:  0.3s ease-in-out;
+  }
+
   .search-btn{
     background-color: #fe424d;
     color: white;
@@ -37,7 +69,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings"><b>Explore</b></a>
       </div>
       <div class="navbar-nav ms-auto">
         <form class="d-flex" role="search">
@@ -61,3 +93,4 @@
     </div>
   </div>
 </nav>
+<div class="mobile-overlay" id="mobile-overlay"></div>

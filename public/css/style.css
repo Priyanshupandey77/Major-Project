@@ -18,7 +18,7 @@ body {
 }
 
 .nav-link {
-  color: #222222 !important;
+  color: #fe424d !important;
 }
 
 /* footer */
@@ -112,8 +112,63 @@ body {
   color: red;
 }
 
+/* Review card fixes for mobile */
+.review-card {
+  width: 100%;
+  max-width: 90%;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  word-wrap: break-word;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.review-card .stars {
+  margin: 0.5rem 0;
+}
+
+.review-card button {
+  width: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  float: right;
+  margin-top: 0.5rem;
+}
+@media (max-width: 576px) {
+  .review-card {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
+
+/* Description fixes for mobile */
+.show-card p.card-text {
+  word-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  .show-card {
+    padding: 1rem;
+  }
+
+  .show-card .card-body {
+    padding: 1rem;
+  }
+}
+
 /* map */
-#map {
-  height: 400px;
-  width: 80vh;
+#map.listing-map {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  #map.listing-map {
+    height: 250px;
+  }
 }
