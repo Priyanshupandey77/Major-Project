@@ -71,7 +71,7 @@ const sessionOptions = {
 
 // Home Route
 app.get("/", (req, res) => {
-  res.send("hi, I am root");
+  res.render("show");
 });
 
 
