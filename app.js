@@ -71,7 +71,7 @@ const sessionOptions = {
 
 // Home Route
 app.get("/", (req, res) => {
-  res.render("show");
+  res.render("home");
 });
 
 
