@@ -70,9 +70,9 @@ const sessionOptions = {
 };
 
 // Home Route
-// app.get("/", (req, res) => {
-//   res.send("hi, I am root");
-// });
+app.get("/", (req, res) => {
+  res.send("hi, I am root");
+});
 
 
 app.use(session(sessionOptions));
