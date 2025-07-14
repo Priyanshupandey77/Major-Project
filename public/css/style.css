@@ -172,3 +172,13 @@ body {
     height: 250px;
   }
 }
+
+@media (max-width: 576px) {
+  .filter p {
+    font-size: 0.7rem;
+  }
+
+  .filter i {
+    font-size: 1rem;
+  }
+}

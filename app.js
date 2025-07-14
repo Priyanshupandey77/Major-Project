@@ -45,6 +45,7 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "/public")));
 
+
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   crypto: {
@@ -80,6 +81,7 @@ app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 passport.use(new LocalStrategy(User.authenticate()));
 
 passport.serializeUser(User.serializeUser());
@@ -107,8 +109,8 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
 // 404 Handler
-// app.all("*",(req,res,next) => {
-//     next(new ExpressError(404, "Page Not Found!"));
+// app.all("*", (req, res, next ) => {
+//   next(new ExpressError(404, "Page Not Found!"));
 // });
 
 // Error Handler
@@ -119,5 +121,5 @@ app.use((err, req, res, next) => {
 
 // Start the server
 app.listen(8080, () => {
-  console.log("Server is listening on port 8080");
+  console.log("server is listening on port 8080");
 });
