@@ -2,7 +2,7 @@ Wonderlust 🌍
 
 A full-stack web application for hotel booking and travel exploration. Users can discover hotels, view details, read/write reviews, and manage bookings seamlessly.
 
-🔗 Live Demo: Wonderlust on Render
+🔗 Live Demo: Wonderlust on Render ( https://major-project-gkgz.onrender.com/listings )
 
 
 🚀 Features
